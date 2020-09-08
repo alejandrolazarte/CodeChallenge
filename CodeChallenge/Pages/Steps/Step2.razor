@@ -1,0 +1,15 @@
+﻿
+
+<div class="@(Step == MyNumber ? "d-block" : "d-none")">
+    <h3>Step2</h3>
+    @ChildContent
+</div>
+
+
+@code {
+
+    private const int MyNumber = 2;
+
+    [Parameter] public int Step { get; set; }
+    [Parameter] public RenderFragment ChildContent { get; set; }
+}

@@ -1,0 +1,24 @@
+﻿<h3>VistaPadre</h3>
+
+<Step1 Step="Step">
+    <ChildContent>
+        @Step1
+    </ChildContent>
+</Step1>
+<Step2 Step="Step">
+    <ChildContent>
+        @Step2
+    </ChildContent>
+</Step2>
+<Step3 Step="Step">
+    <ChildContent>
+        @Step3
+    </ChildContent>
+</Step3>
+
+@code {
+    [Parameter] public int Step { get; set; } = 1;
+    [Parameter] public RenderFragment Step1 { get; set; }
+    [Parameter] public RenderFragment Step2 { get; set; }
+    [Parameter] public RenderFragment Step3 { get; set; }
+}

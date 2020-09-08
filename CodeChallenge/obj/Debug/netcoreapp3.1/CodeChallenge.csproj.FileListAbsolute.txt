@@ -1227,3 +1227,13 @@ C:\Users\ale_s\source\repos\CodeChallenge\CodeChallenge\obj\Debug\netcoreapp3.1\
 C:\Users\ale_s\source\repos\CodeChallenge\CodeChallenge\obj\Debug\netcoreapp3.1\CodeChallenge.pdb
 C:\Users\ale_s\source\repos\CodeChallenge\CodeChallenge\obj\Debug\netcoreapp3.1\CodeChallenge.genruntimeconfig.cache
 C:\Users\ale_s\source\repos\CodeChallenge\CodeChallenge\obj\Debug\netcoreapp3.1\CodeChallenge.csprojAssemblyReference.cache
+C:\Users\ale_s\source\repos\CodeChallenge\CodeChallenge\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Steps\Step1.razor.g.cs
+C:\Users\ale_s\source\repos\CodeChallenge\CodeChallenge\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Steps\Step2.razor.g.cs
+C:\Users\ale_s\source\repos\CodeChallenge\CodeChallenge\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Steps\Step3.razor.g.cs
+C:\Users\ale_s\source\repos\CodeChallenge\CodeChallenge\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Steps\VistaPadre.razor.g.cs
+C:\Users\ale_s\source\repos\CodeChallenge\CodeChallenge\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Steps\VistaUsoSteps.razor.g.cs
+C:\Users\ale_s\source\repos\CodeChallenge\CodeChallenge\obj\Debug\netcoreapp3.1\Razor\Pages\Steps\Step1.razor.g.cs
+C:\Users\ale_s\source\repos\CodeChallenge\CodeChallenge\obj\Debug\netcoreapp3.1\Razor\Pages\Steps\Step2.razor.g.cs
+C:\Users\ale_s\source\repos\CodeChallenge\CodeChallenge\obj\Debug\netcoreapp3.1\Razor\Pages\Steps\Step3.razor.g.cs
+C:\Users\ale_s\source\repos\CodeChallenge\CodeChallenge\obj\Debug\netcoreapp3.1\Razor\Pages\Steps\VistaPadre.razor.g.cs
+C:\Users\ale_s\source\repos\CodeChallenge\CodeChallenge\obj\Debug\netcoreapp3.1\Razor\Pages\Steps\VistaUsoSteps.razor.g.cs
