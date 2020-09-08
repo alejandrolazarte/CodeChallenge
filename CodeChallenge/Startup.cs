@@ -1,4 +1,6 @@
 using CodeChallenge.Data;
+using CodeChallenge.Services;
+using CodeChallenge.Services.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -22,9 +24,14 @@ namespace CodeChallenge
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<ZoologicoServicio>();
             services.AddControllersWithViews()
              .AddRazorRuntimeCompilation();
+
+            services.AddSingleton<IZoologicoServicio, ZoologicoServicio>();
+            services.AddTransient<ICalcularAlimentoServicio, CalcularComidaServicio>();
+            services.AddTransient<ICalcularAlimentoPorTipoAnimalServicio, CalcularAlimentoCarnivoroServicio>();
+            services.AddTransient<ICalcularAlimentoPorTipoAnimalServicio, CalcularAlimentoHervivoroServicio>();
+            services.AddTransient<ICalcularAlimentoPorTipoAnimalServicio, CalcularAlimentoReptilServicio>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,75 @@
+﻿@page "/listaAnimal"
+@using CodeChallenge.Data.Model
+@using CodeChallenge.Services.Contracts
+@inject IZoologicoServicio ZoologicoServicio
+@inject ICalcularAlimentoServicio CalcularComidaServicio
+<Card Titulo="Lista de Animales">
+    <Body>
+        <div>
+            <p>Cantidad de comida necesaria del mes:</p>
+            <p>carne = @CantidadCarneMes</p>
+            <p>hierbas = @CantidadHiervasMes</p>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Especie</th>
+                    <th>Fecha de incorporación</th>
+                    <th>Edad</th>
+                    <th>Lugar de Origen</th>
+                    <th>Peso</th>
+                    <th>Porcentaje</th>
+                    <th>Kilos</th>
+                    <th>Cantdad de alimento al mes</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Animales.Any())
+                {
+                    @foreach (var animal in Animales)
+                    {
+                        <tr>
+                            <th>@animal.ToString()</th>
+                            <td>@animal.Especie</td>
+                            <td>@animal.FechaIncorporacion</td>
+                            <td>@animal.Edad</td>
+                            <td>@animal.LugarOrigen</td>
+                            <td>@animal.Peso</td>
+                            <td>@animal.Porcentaje</td>
+                            <td>@animal.Kilos</td>
+                            <td>@animal.CantidadAlimentoPorMes.ToString("N2") Kg</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr class="text-center">
+                        <td colspan="8">Sin datos</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </Body>
+</Card>
+
+@code {
+    public List<Animal> Animales { get; set; }
+    public string CantidadCarneMes { get; set; } = string.Empty;
+    public string CantidadHiervasMes { get; set; } = string.Empty;
+
+    protected override Task OnInitializedAsync()
+    {
+        CargarAnimales();
+        var carne = CalcularComidaServicio.ObtenerTotalCarneDelMes(Animales).ToString("N2");
+        var hiervas = CalcularComidaServicio.ObtenerTotalHierbasDelMes(Animales).ToString("N2");
+        CantidadCarneMes = $"{carne} Kg";
+        CantidadHiervasMes = $"{hiervas} Kg";
+        return base.OnInitializedAsync();
+    }
+
+    private void CargarAnimales()
+    {
+        Animales = ZoologicoServicio.ObtenerTodos();
+    }
+}

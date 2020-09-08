@@ -1,0 +1,67 @@
+﻿@using CodeChallenge.Data.Model
+
+<EditForm Model="@Carnivoro" OnValidSubmit="@OnValidSubmit">
+
+    <div class="form-group row justify-content-center">
+        <div class="col-2">
+            <label class="col-form-label">Especie</label>
+        </div>
+        <div class="col-4">
+            <InputText @bind-Value="Carnivoro.Especie" class="form-control"></InputText>
+            <ValidationMessage For="() => Carnivoro.Especie" />
+        </div>
+    </div>
+    <div class="form-group row justify-content-center">
+        <div class="col-2">
+            <label class="col-form-label">Edad</label>
+        </div>
+        <div class="col-4">
+            <InputNumber @bind-Value="Carnivoro.Edad" class="form-control"></InputNumber>
+            <ValidationMessage For="() => Carnivoro.Edad" />
+        </div>
+    </div>
+    <div class="form-group row justify-content-center">
+        <div class="col-2">
+            <label class="col-form-label">Lugar de Origen</label>
+        </div>
+        <div class="col-4">
+            <InputText @bind-Value="Carnivoro.LugarOrigen" class="form-control"></InputText>
+            <ValidationMessage For="() => Carnivoro.LugarOrigen" />
+        </div>
+    </div>
+    <div class="form-group row justify-content-center">
+        <div class="col-2">
+            <label class="col-form-label">Peso</label>
+        </div>
+        <div class="col-4">
+            <InputNumber @bind-Value="Carnivoro.Peso" class="form-control"></InputNumber>
+            <ValidationMessage For="() => Carnivoro.Peso" />
+        </div>
+    </div>
+    <div class="form-group row justify-content-center">
+        <div class="col-2">
+            <label class="col-form-label">Porcentaje</label>
+        </div>
+        <div class="col-4">
+            <InputNumber @bind-Value="Carnivoro.Porcentaje" class="form-control"></InputNumber>
+            <ValidationMessage For="() => Carnivoro.Porcentaje" />
+        </div>
+    </div>
+    <div class="form-group row justify-content-center">
+        <div class="col-2">
+            <label class="col-form-label">Kilos</label>
+        </div>
+        <div class="col-4">
+            <InputNumber @bind-Value="Carnivoro.Kilos" class="form-control"></InputNumber>
+            <ValidationMessage For="() => Carnivoro.Kilos" />
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Nuevo</button>
+    <DataAnnotationsValidator />
+</EditForm>
+
+@code {
+
+    [Parameter] public Data.Model.Carnivoro Carnivoro { get; set; } = new Carnivoro();
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+}

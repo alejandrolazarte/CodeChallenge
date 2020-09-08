@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\_Sources\\CulturaIT\\CodeChallenge\\CodeChallenge\\CodeChallenge.csproj": {}
+    "C:\\Users\\ale_s\\source\\repos\\CodeChallenge\\CodeChallenge\\CodeChallenge.csproj": {}
   },
   "projects": {
-    "C:\\_Sources\\CulturaIT\\CodeChallenge\\CodeChallenge\\CodeChallenge.csproj": {
+    "C:\\Users\\ale_s\\source\\repos\\CodeChallenge\\CodeChallenge\\CodeChallenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\_Sources\\CulturaIT\\CodeChallenge\\CodeChallenge\\CodeChallenge.csproj",
+        "projectUniqueName": "C:\\Users\\ale_s\\source\\repos\\CodeChallenge\\CodeChallenge\\CodeChallenge.csproj",
         "projectName": "CodeChallenge",
-        "projectPath": "C:\\_Sources\\CulturaIT\\CodeChallenge\\CodeChallenge\\CodeChallenge.csproj",
-        "packagesPath": "C:\\Users\\Federico-Desk\\.nuget\\packages\\",
-        "outputPath": "C:\\_Sources\\CulturaIT\\CodeChallenge\\CodeChallenge\\obj\\",
+        "projectPath": "C:\\Users\\ale_s\\source\\repos\\CodeChallenge\\CodeChallenge\\CodeChallenge.csproj",
+        "packagesPath": "C:\\Users\\ale_s\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ale_s\\source\\repos\\CodeChallenge\\CodeChallenge\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Federico-Desk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ale_s\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

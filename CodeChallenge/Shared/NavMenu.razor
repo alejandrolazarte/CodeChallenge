@@ -17,16 +17,21 @@
                 <span class="oi oi-plus" aria-hidden="true"></span> Nuevo Animal
             </NavLink>
         </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="listaAnimal">
+                <span class="oi oi-list" aria-hidden="true"></span> Lista de Animales
+            </NavLink>
+        </li>
     </ul>
 </div>
 
 @code {
-    private bool collapseNavMenu = true;
+    private bool _collapseNavMenu = true;
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private string NavMenuCssClass => _collapseNavMenu ? "collapse" : null;
 
     private void ToggleNavMenu()
     {
-        collapseNavMenu = !collapseNavMenu;
+        _collapseNavMenu = !_collapseNavMenu;
     }
 }

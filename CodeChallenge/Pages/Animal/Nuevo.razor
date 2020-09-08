@@ -1,0 +1,68 @@
+﻿@page "/nuevoAnimal"
+@using CodeChallenge.Services.Contracts
+@using CodeChallenge.Data.Model
+@inject IZoologicoServicio ZoologicoServicio
+
+<Card Titulo="Nuevo Animal">
+    <Body>
+
+    <div class="row @(SeExedioTope ? "d-block":"d-none")">
+        <div class="text-info">Acaba de Exeder los 1500 kilos de comida al mes.</div>
+    </div>
+    <div class="form-group row justify-content-center">
+        <div class="col-2">
+            <label class="col-form-label">Tipo</label>
+        </div>
+        <div class="col-4">
+            <select @bind="Tipo" class="form-control">
+                <option value="0">-- Seleccionar Tipo --</option>
+                <option value="1">Carnivoro</option>
+                <option value="2">Hervivoro</option>
+                <option value="3">Reptil</option>
+            </select>
+        </div>
+    </div>
+    @if (Tipo == 1)
+    {
+        <FormularioCarnivoro Carnivoro="Carnivorio" OnValidSubmit="AgregarCarnivorio"></FormularioCarnivoro>
+    }
+    else if (Tipo == 2)
+    {
+        <FormularioHerviboro Hervivoro="Hervivoro" OnValidSubmit="AgregarHervivoro"></FormularioHerviboro>
+    }
+    else if (Tipo == 3)
+    {
+        <FormularioReptil Reptil="Reptil" OnValidSubmit="AgregarReptil"></FormularioReptil>
+    }
+    </Body>
+</Card>
+
+@code {
+
+    protected Carnivoro Carnivorio { get; set; } = new Carnivoro();
+    protected string Display { get; set; }
+    protected Hervivoro Hervivoro { get; set; } = new Hervivoro();
+    protected Reptil Reptil { get; set; } = new Reptil();
+
+    protected bool SeExedioTope;
+    protected int Tipo = 0;
+
+    private void AgregarCarnivorio()
+    {
+        ZoologicoServicio.AgregarAnimal(Carnivorio);
+        SeExedioTope = ZoologicoServicio.ExedioTopeAlimentoMes();
+        Carnivorio = new Carnivoro();
+    }
+    private void AgregarHervivoro()
+    {
+        ZoologicoServicio.AgregarAnimal(Hervivoro);
+        SeExedioTope = ZoologicoServicio.ExedioTopeAlimentoMes();
+        Hervivoro = new Hervivoro();
+    }
+    private void AgregarReptil()
+    {
+        ZoologicoServicio.AgregarAnimal(Reptil);
+        SeExedioTope = ZoologicoServicio.ExedioTopeAlimentoMes();
+        Reptil = new Reptil();
+    }
+}
